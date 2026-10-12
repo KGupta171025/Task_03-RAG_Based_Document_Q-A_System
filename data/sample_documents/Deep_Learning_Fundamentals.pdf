@@ -1,0 +1,77 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 4 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 5 0 R >> >> /MediaBox [0 0 612 792] /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 5 0 R >> >> /MediaBox [0 0 612 792] /Contents 7 0 R >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Length 420 >>
+stream
+BT
+/F1 18 Tf
+50 720 Td
+(DEEP LEARNING FUNDAMENTALS - PAGE 1) Tj
+/F1 12 Tf
+0 -40 Td
+(Chapter 1: Artificial Neural Networks and Backpropagation) Tj
+0 -25 Td
+(Artificial neural networks consist of interconnected layers of artificial neurons.) Tj
+0 -20 Td
+(During the forward pass, input features are multiplied by learnable weights, summed) Tj
+0 -20 Td
+(with a bias term, and transformed through non-linear activation functions such as ReLU.) Tj
+0 -25 Td
+(Backpropagation applies the calculus chain rule to compute gradients of the loss function) Tj
+0 -20 Td
+(with respect to each parameter. Optimizers like AdamW update weights iteratively.) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Length 420 >>
+stream
+BT
+/F1 18 Tf
+50 720 Td
+(DEEP LEARNING FUNDAMENTALS - PAGE 2) Tj
+/F1 12 Tf
+0 -40 Td
+(Chapter 2: Transformer Architectures and Self-Attention) Tj
+0 -25 Td
+(The Transformer model introduced by Vaswani et al. replaced recurrent networks) Tj
+0 -20 Td
+(with the Self-Attention mechanism. Scaled Dot-Product Attention allows models to) Tj
+0 -20 Td
+(weigh the importance of tokens across arbitrary sequence distances in parallel.) Tj
+0 -25 Td
+(Multi-Head Attention projects queries, keys, and values into multiple subspaces,) Tj
+0 -20 Td
+(enabling modern models to capture nuanced grammatical and semantic relationships.) Tj
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000123 00000 n 
+0000000250 00000 n 
+0000000377 00000 n 
+0000000455 00000 n 
+0000000928 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+1401
+%%EOF
