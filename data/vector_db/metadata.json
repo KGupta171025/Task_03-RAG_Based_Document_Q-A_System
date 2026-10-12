@@ -1,0 +1,136 @@
+{
+  "documents_map": {
+    "ai_engineering_handbook": {
+      "doc_id": "ai_engineering_handbook",
+      "filename": "AI_Engineering_Handbook.txt",
+      "file_type": "txt",
+      "upload_timestamp": "2026-10-12T22:33:51.834799",
+      "total_chunks": 2,
+      "total_tokens": 638
+    },
+    "cloud_computing_architecture": {
+      "doc_id": "cloud_computing_architecture",
+      "filename": "Cloud_Computing_Architecture.txt",
+      "file_type": "txt",
+      "upload_timestamp": "2026-10-12T22:33:51.885399",
+      "total_chunks": 1,
+      "total_tokens": 348
+    },
+    "deep_learning_fundamentals": {
+      "doc_id": "deep_learning_fundamentals",
+      "filename": "Deep_Learning_Fundamentals.pdf",
+      "file_type": "pdf",
+      "upload_timestamp": "2026-10-12T22:33:51.935688",
+      "total_chunks": 2,
+      "total_tokens": 192
+    },
+    "nexoramind_ai_company_policy": {
+      "doc_id": "nexoramind_ai_company_policy",
+      "filename": "Nexoramind_AI_Company_Policy.docx",
+      "file_type": "docx",
+      "upload_timestamp": "2026-10-12T22:33:51.996433",
+      "total_chunks": 1,
+      "total_tokens": 214
+    },
+    "b900d783": {
+      "doc_id": "b900d783",
+      "filename": "test_upload.txt",
+      "file_type": "txt",
+      "upload_timestamp": "2026-10-12T22:59:12.002475",
+      "total_chunks": 1,
+      "total_tokens": 15
+    },
+    "bf68a1de": {
+      "doc_id": "bf68a1de",
+      "filename": "faiss_doc.txt",
+      "file_type": "txt",
+      "upload_timestamp": "2026-10-12T22:59:12.822000",
+      "total_chunks": 1,
+      "total_tokens": 31
+    }
+  },
+  "indexed_chunk_ids": [
+    "ai_engineering_handbook_c0",
+    "ai_engineering_handbook_c1",
+    "cloud_computing_architecture_c0",
+    "deep_learning_fundamentals_c0",
+    "deep_learning_fundamentals_c1",
+    "nexoramind_ai_company_policy_c0",
+    "b900d783_c0",
+    "bf68a1de_c0"
+  ],
+  "chunks_map": {
+    "ai_engineering_handbook_c0": {
+      "chunk_id": "ai_engineering_handbook_c0",
+      "doc_id": "ai_engineering_handbook",
+      "source_filename": "AI_Engineering_Handbook.txt",
+      "page_number": 1,
+      "chunk_index": 0,
+      "text": "nexoramind ai engineering handbook ( 2026 edition ) chapter 1 : foundations of retrieval - augmented generation ( rag ) retrieval - augmented generation ( rag ) is a machine learning design pattern that optimizes the output of large language models ( llms ) by referencing an authoritative knowledge base outside of its training data before generating a response. standard llms suffer from knowledge cutoff dates, lack of domain - specific context, and catastrophic hallucinations. rag addresses these shortcomings by combining dense vector retrieval with contextual language generation. the standard rag pipeline operates in three sequential phases : 1. ingestion & indexing : documents are parsed from raw formats ( pdf, docx, txt ), decomposed into uniform text chunks, converted into continuous numerical vector embeddings, and stored in high - performance similarity search indexes such as faiss, chromadb, or milvus. 2. dense semantic retrieval : upon receiving a user prompt, the query is embedded into the same semantic vector space using identical embedding models. a similarity metric \u2014 predominantly cosine similarity or inner product \u2014 is computed against the indexed corpus to retrieve the top - k most relevant chunks. 3. grounded synthesis : the retrieved chunks are formatted into a structured prompt context alongside the original user inquiry. the generative model synthesizes a factual, coherent answer with verified source citations. chapter 2 : text chunking strategies and overlap chunking is the process of splitting lengthy documents into smaller, coherent text segments for embedding and indexing. selecting an appropriate chunk size is critical for retrieval quality : - if chunks are too small ( e. g., < 100 tokens ), they lose semantic context, leading to incomplete or fragmented answers. - if chunks are too large ( e. g., > 1000 tokens ), embeddings become diluted, aggregating multiple disparate concepts and degrading retrieval specificity. for standard technical documentation, the industry benchmark standard specifies chunk sizes of approximately 500 tokens with an overlap of 50 tokens. overlap prevents information loss across chunk boundaries, ensuring that critical clauses and definitions are preserved across adjacent chunks. chapter 3 : dense vector embeddings and faiss dense embeddings represent text in continuous high - dimensional vector spaces where semantic proximity correlates with geometric proximity. models such as sentence - transformers'all - minilm - l6 - v2'map textual sequences",
+      "token_count": 500
+    },
+    "ai_engineering_handbook_c1": {
+      "chunk_id": "ai_engineering_handbook_c1",
+      "doc_id": "ai_engineering_handbook",
+      "source_filename": "AI_Engineering_Handbook.txt",
+      "page_number": 1,
+      "chunk_index": 1,
+      "text": "##dings and faiss dense embeddings represent text in continuous high - dimensional vector spaces where semantic proximity correlates with geometric proximity. models such as sentence - transformers'all - minilm - l6 - v2'map textual sequences into 384 - dimensional dense vectors. faiss ( facebook ai similarity search ) is an open - source library optimized for efficient similarity search and clustering of dense vectors. when vector embeddings are l2 - normalized to unit length, the inner product computed via faiss indexflatip is mathematically equivalent to cosine similarity. this provides millisecond search latency over millions of document vectors.",
+      "token_count": 138
+    },
+    "cloud_computing_architecture_c0": {
+      "chunk_id": "cloud_computing_architecture_c0",
+      "doc_id": "cloud_computing_architecture",
+      "source_filename": "Cloud_Computing_Architecture.txt",
+      "page_number": 1,
+      "chunk_index": 0,
+      "text": "CLOUD COMPUTING INFRASTRUCTURE AND MICROSERVICES OVERVIEW\r\n\r\nSection 1: Microservice Architecture and Containerization\r\nModern cloud-native applications are decomposed into decoupled, independently deployable microservices communicating via lightweight protocols such as RESTful HTTP/JSON or gRPC.\r\nDocker containerization packages applications alongside their runtime dependencies, system binaries, and configuration files into standardized portable container images. This eliminates environment drift between local development workstations and production cloud clusters.\r\n\r\nSection 2: Kubernetes Container Orchestration\r\nKubernetes (K8s) serves as the industry standard platform for automating deployment, scaling, and operational management of containerized workloads:\r\n- Pods: The smallest deployable computing units in Kubernetes, encapsulating one or more tightly coupled containers sharing network and storage namespaces.\r\n- Deployments: Declarative controllers that manage replica sets, rolling zero-downtime updates, and automated self-healing pod restarts.\r\n- Services: Persistent abstractions providing static IP addresses, DNS service discovery, and load balancing across dynamic ephemeral pods.\r\n- Ingress Controllers: Application-layer HTTP/HTTPS reverse proxies routing external internet traffic to internal cluster services based on path and host rules.\r\n\r\nSection 3: High Availability and Disaster Recovery\r\nEnterprise cloud architectures enforce Multi-Availability Zone (Multi-AZ) and multi-region deployment topologies to ensure 99.99% system availability. Critical data layers utilize read-replicas, continuous asynchronous replication, and automated failover protocols. RTO (Recovery Time Objective) and RPO (Recovery Point Objective) metrics dictate backup frequency and disaster recovery drills.",
+      "token_count": 348
+    },
+    "deep_learning_fundamentals_c0": {
+      "chunk_id": "deep_learning_fundamentals_c0",
+      "doc_id": "deep_learning_fundamentals",
+      "source_filename": "Deep_Learning_Fundamentals.pdf",
+      "page_number": 1,
+      "chunk_index": 0,
+      "text": "DEEP LEARNING FUNDAMENTALS - PAGE 1\nChapter 1: Artificial Neural Networks and Backpropagation\nArtificial neural networks consist of interconnected layers of artificial neurons.\nDuring the forward pass, input features are multiplied by learnable weights, summed\nwith a bias term, and transformed through non-linear activation functions such as ReLU.\nBackpropagation applies the calculus chain rule to compute gradients of the loss function\nwith respect to each parameter. Optimizers like AdamW update weights iteratively.",
+      "token_count": 99
+    },
+    "deep_learning_fundamentals_c1": {
+      "chunk_id": "deep_learning_fundamentals_c1",
+      "doc_id": "deep_learning_fundamentals",
+      "source_filename": "Deep_Learning_Fundamentals.pdf",
+      "page_number": 2,
+      "chunk_index": 1,
+      "text": "DEEP LEARNING FUNDAMENTALS - PAGE 2\nChapter 2: Transformer Architectures and Self-Attention\nThe Transformer model introduced by Vaswani et al. replaced recurrent networks\nwith the Self-Attention mechanism. Scaled Dot-Product Attention allows models to\nweigh the importance of tokens across arbitrary sequence distances in parallel.\nMulti-Head Attention projects queries, keys, and values into multiple subspaces,\nenabling modern models to capture nuanced grammatical and semantic relationships.",
+      "token_count": 93
+    },
+    "nexoramind_ai_company_policy_c0": {
+      "chunk_id": "nexoramind_ai_company_policy_c0",
+      "doc_id": "nexoramind_ai_company_policy",
+      "source_filename": "Nexoramind_AI_Company_Policy.docx",
+      "page_number": 1,
+      "chunk_index": 0,
+      "text": "NEXORAMIND TECHNOLOGIES - AI ENGINEER INTERNSHIP POLICY\n\n1. Program Overview and Evaluation Rubric\n\nThe Nexoramind AI Engineer 6 Months Program consists of 10 hands-on production tasks. Candidates must achieve an evaluation approval rating exceeding 80% on each task to advance. Each task requires a publicly accessible GitHub repository, unit test suites, clear documentation, and reproducible notebooks.\n\n2. Working Hours and Remote Collaboration\n\nInterns operate under flexible hybrid remote schedules. Core collaboration hours are 10:00 AM to 5:00 PM IST. Weekly technical syncs and milestone evaluations are conducted via video conference. All code submissions must follow PEP 8 standards, strict type annotations, and modular package structure.\n\n3. Data Security and Confidentiality\n\nInterns are strictly prohibited from storing plain-text proprietary API credentials, tokens, or private customer records in public version control. Environment variables (.env files) must be excluded via .gitignore. Models fine-tuned during the program must cite training data provenance and comply with responsible AI ethics.",
+      "token_count": 214
+    },
+    "b900d783_c0": {
+      "chunk_id": "b900d783_c0",
+      "doc_id": "b900d783",
+      "source_filename": "test_upload.txt",
+      "page_number": 1,
+      "chunk_index": 0,
+      "text": "Machine learning models use embeddings for semantic search and retrieval tasks.",
+      "token_count": 15
+    },
+    "bf68a1de_c0": {
+      "chunk_id": "bf68a1de_c0",
+      "doc_id": "bf68a1de",
+      "source_filename": "faiss_doc.txt",
+      "page_number": 1,
+      "chunk_index": 0,
+      "text": "FAISS is a library for efficient similarity search developed by Facebook AI Research. It supports various index types including Flat, IVF, and HNSW.",
+      "token_count": 31
+    }
+  }
+}

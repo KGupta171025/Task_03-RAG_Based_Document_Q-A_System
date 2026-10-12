@@ -1,0 +1,15 @@
+CLOUD COMPUTING INFRASTRUCTURE AND MICROSERVICES OVERVIEW
+
+Section 1: Microservice Architecture and Containerization
+Modern cloud-native applications are decomposed into decoupled, independently deployable microservices communicating via lightweight protocols such as RESTful HTTP/JSON or gRPC.
+Docker containerization packages applications alongside their runtime dependencies, system binaries, and configuration files into standardized portable container images. This eliminates environment drift between local development workstations and production cloud clusters.
+
+Section 2: Kubernetes Container Orchestration
+Kubernetes (K8s) serves as the industry standard platform for automating deployment, scaling, and operational management of containerized workloads:
+- Pods: The smallest deployable computing units in Kubernetes, encapsulating one or more tightly coupled containers sharing network and storage namespaces.
+- Deployments: Declarative controllers that manage replica sets, rolling zero-downtime updates, and automated self-healing pod restarts.
+- Services: Persistent abstractions providing static IP addresses, DNS service discovery, and load balancing across dynamic ephemeral pods.
+- Ingress Controllers: Application-layer HTTP/HTTPS reverse proxies routing external internet traffic to internal cluster services based on path and host rules.
+
+Section 3: High Availability and Disaster Recovery
+Enterprise cloud architectures enforce Multi-Availability Zone (Multi-AZ) and multi-region deployment topologies to ensure 99.99% system availability. Critical data layers utilize read-replicas, continuous asynchronous replication, and automated failover protocols. RTO (Recovery Time Objective) and RPO (Recovery Point Objective) metrics dictate backup frequency and disaster recovery drills.

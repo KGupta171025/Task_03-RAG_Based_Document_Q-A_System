@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "question": "What are the three sequential phases of a standard RAG pipeline?",
+    "expected_source_file": "AI_Engineering_Handbook.txt",
+    "ground_truth": "The three phases are Ingestion & Indexing, Dense Semantic Retrieval, and Grounded Synthesis.",
+    "key_entities": ["Ingestion", "Retrieval", "Synthesis"]
+  },
+  {
+    "id": 2,
+    "question": "Why do standard Large Language Models require Retrieval-Augmented Generation?",
+    "expected_source_file": "AI_Engineering_Handbook.txt",
+    "ground_truth": "Standard LLMs suffer from knowledge cutoff dates, lack of domain-specific context, and hallucinations, which RAG resolves.",
+    "key_entities": ["cutoff", "domain", "hallucination"]
+  },
+  {
+    "id": 3,
+    "question": "What is the recommended token chunk size and overlap for technical documents?",
+    "expected_source_file": "AI_Engineering_Handbook.txt",
+    "ground_truth": "The industry benchmark standard specifies chunk sizes of approximately 500 tokens with an overlap of 50 tokens.",
+    "key_entities": ["500 tokens", "50 tokens", "overlap"]
+  },
+  {
+    "id": 4,
+    "question": "How does FAISS IndexFlatIP compute Cosine Similarity?",
+    "expected_source_file": "AI_Engineering_Handbook.txt",
+    "ground_truth": "When vector embeddings are L2-normalized to unit length, the inner product computed via FAISS IndexFlatIP is mathematically equivalent to Cosine Similarity.",
+    "key_entities": ["L2-normalized", "inner product", "IndexFlatIP"]
+  },
+  {
+    "id": 5,
+    "question": "What is the smallest deployable computing unit in Kubernetes?",
+    "expected_source_file": "Cloud_Computing_Architecture.txt",
+    "ground_truth": "Pods are the smallest deployable computing units in Kubernetes, encapsulating one or more tightly coupled containers.",
+    "key_entities": ["Pods", "containers"]
+  },
+  {
+    "id": 6,
+    "question": "What is the role of Kubernetes Ingress Controllers?",
+    "expected_source_file": "Cloud_Computing_Architecture.txt",
+    "ground_truth": "Ingress Controllers route external internet HTTP and HTTPS traffic to internal cluster services based on path and host rules.",
+    "key_entities": ["traffic", "HTTP", "route", "services"]
+  },
+  {
+    "id": 7,
+    "question": "What is the minimum approval rating required for Nexoramind internship tasks?",
+    "expected_source_file": "Nexoramind_AI_Company_Policy.docx",
+    "ground_truth": "Candidates must achieve an evaluation approval rating exceeding 80% on each task to advance.",
+    "key_entities": ["80%", "approval"]
+  },
+  {
+    "id": 8,
+    "question": "What are the core collaboration hours under the Nexoramind remote work policy?",
+    "expected_source_file": "Nexoramind_AI_Company_Policy.docx",
+    "ground_truth": "Core collaboration hours are 10:00 AM to 5:00 PM IST.",
+    "key_entities": ["10:00 AM", "5:00 PM", "IST"]
+  },
+  {
+    "id": 9,
+    "question": "How does the backpropagation algorithm update neural network weights?",
+    "expected_source_file": "Deep_Learning_Fundamentals.pdf",
+    "ground_truth": "Backpropagation applies the calculus chain rule to compute loss gradients with respect to each parameter, and optimizers like AdamW update weights iteratively.",
+    "key_entities": ["chain rule", "gradients", "weights"]
+  },
+  {
+    "id": 10,
+    "question": "What mechanism did the Transformer architecture introduce to replace recurrent networks?",
+    "expected_source_file": "Deep_Learning_Fundamentals.pdf",
+    "ground_truth": "The Transformer replaced recurrent networks with the Self-Attention mechanism and Scaled Dot-Product Attention.",
+    "key_entities": ["Self-Attention", "Scaled Dot-Product", "Vaswani"]
+  }
+]

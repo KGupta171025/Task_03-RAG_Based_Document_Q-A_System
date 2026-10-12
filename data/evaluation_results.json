@@ -1,0 +1,130 @@
+{
+  "total_questions": 10,
+  "retrieval_accuracy": 100.0,
+  "citation_accuracy": 100.0,
+  "overall_accuracy": 100.0,
+  "target_accuracy": 80.0,
+  "target_met": true,
+  "test_results": [
+    {
+      "id": 1,
+      "question": "What are the three sequential phases of a standard RAG pipeline?",
+      "expected_source": "AI_Engineering_Handbook.txt",
+      "ground_truth": "The three phases are Ingestion & Indexing, Dense Semantic Retrieval, and Grounded Synthesis.",
+      "generated_answer": "Based on the provided documentation, the standard rag pipeline operates in three sequential phases : 1. [AI_Engineering_Handbook.txt | Page 1 | Chunk 0] nexoramind ai engineering handbook ( 2026 edition ) chapter 1 : foundations of retrieval - augmented generation ( rag ) retrieval - augmented generation ( rag ) is a machine learning design pattern that optimizes the output of large language models ( llms ) by referencing an authoritative knowledge base outside of its training data before generating a response. [AI_Engineering_Handbook.txt | Page 1 | Chunk 0] standard llms suffer from knowledge cutoff dates, lack of domain - specific context, and catastrophic hallucinations. [AI_Engineering_Handbook.txt | Page 1 | Chunk 0]",
+      "retrieval_success": true,
+      "citation_success": true,
+      "entity_coverage": 1.0,
+      "top_similarity": 0.2062,
+      "is_correct": true
+    },
+    {
+      "id": 2,
+      "question": "Why do standard Large Language Models require Retrieval-Augmented Generation?",
+      "expected_source": "AI_Engineering_Handbook.txt",
+      "ground_truth": "Standard LLMs suffer from knowledge cutoff dates, lack of domain-specific context, and hallucinations, which RAG resolves.",
+      "generated_answer": "Based on the provided documentation, nexoramind ai engineering handbook ( 2026 edition ) chapter 1 : foundations of retrieval - augmented generation ( rag ) retrieval - augmented generation ( rag ) is a machine learning design pattern that optimizes the output of large language models ( llms ) by referencing an authoritative knowledge base outside of its training data before generating a response. [AI_Engineering_Handbook.txt | Page 1 | Chunk 0] rag addresses these shortcomings by combining dense vector retrieval with contextual language generation. [AI_Engineering_Handbook.txt | Page 1 | Chunk 0] dense semantic retrieval : upon receiving a user prompt, the query is embedded into the same semantic vector space using identical embedding models. [AI_Engineering_Handbook.txt | Page 1 | Chunk 0]",
+      "retrieval_success": true,
+      "citation_success": true,
+      "entity_coverage": 1.0,
+      "top_similarity": 0.5842,
+      "is_correct": true
+    },
+    {
+      "id": 3,
+      "question": "What is the recommended token chunk size and overlap for technical documents?",
+      "expected_source": "AI_Engineering_Handbook.txt",
+      "ground_truth": "The industry benchmark standard specifies chunk sizes of approximately 500 tokens with an overlap of 50 tokens.",
+      "generated_answer": "Based on the provided documentation, for standard technical documentation, the industry benchmark standard specifies chunk sizes of approximately 500 tokens with an overlap of 50 tokens. [AI_Engineering_Handbook.txt | Page 1 | Chunk 0] chapter 2 : text chunking strategies and overlap chunking is the process of splitting lengthy documents into smaller, coherent text segments for embedding and indexing. [AI_Engineering_Handbook.txt | Page 1 | Chunk 0] selecting an appropriate chunk size is critical for retrieval quality : - if chunks are too small ( e. [AI_Engineering_Handbook.txt | Page 1 | Chunk 0]",
+      "retrieval_success": true,
+      "citation_success": true,
+      "entity_coverage": 1.0,
+      "top_similarity": 0.2714,
+      "is_correct": true
+    },
+    {
+      "id": 4,
+      "question": "How does FAISS IndexFlatIP compute Cosine Similarity?",
+      "expected_source": "AI_Engineering_Handbook.txt",
+      "ground_truth": "When vector embeddings are L2-normalized to unit length, the inner product computed via FAISS IndexFlatIP is mathematically equivalent to Cosine Similarity.",
+      "generated_answer": "Based on the provided documentation, when vector embeddings are l2 - normalized to unit length, the inner product computed via faiss indexflatip is mathematically equivalent to cosine similarity. [AI_Engineering_Handbook.txt | Page 1 | Chunk 1] faiss ( facebook ai similarity search ) is an open - source library optimized for efficient similarity search and clustering of dense vectors. [AI_Engineering_Handbook.txt | Page 1 | Chunk 1] ingestion & indexing : documents are parsed from raw formats ( pdf, docx, txt ), decomposed into uniform text chunks, converted into continuous numerical vector embeddings, and stored in high - performance similarity search indexes such as faiss, chromadb, or milvus. [AI_Engineering_Handbook.txt | Page 1 | Chunk 0]",
+      "retrieval_success": true,
+      "citation_success": true,
+      "entity_coverage": 0.67,
+      "top_similarity": 0.5072,
+      "is_correct": true
+    },
+    {
+      "id": 5,
+      "question": "What is the smallest deployable computing unit in Kubernetes?",
+      "expected_source": "Cloud_Computing_Architecture.txt",
+      "ground_truth": "Pods are the smallest deployable computing units in Kubernetes, encapsulating one or more tightly coupled containers.",
+      "generated_answer": "Based on the provided documentation, Section 2: Kubernetes Container Orchestration\r\nKubernetes (K8s) serves as the industry standard platform for automating deployment, scaling, and operational management of containerized workloads:\r\n- Pods: The smallest deployable computing units in Kubernetes, encapsulating one or more tightly coupled containers sharing network and storage namespaces. [Cloud_Computing_Architecture.txt | Page 1 | Chunk 0] CLOUD COMPUTING INFRASTRUCTURE AND MICROSERVICES OVERVIEW\r\n\r\nSection 1: Microservice Architecture and Containerization\r\nModern cloud-native applications are decomposed into decoupled, independently deployable microservices communicating via lightweight protocols such as RESTful HTTP/JSON or gRPC. [Cloud_Computing_Architecture.txt | Page 1 | Chunk 0] Each task requires a publicly accessible GitHub repository, unit test suites, clear documentation, and reproducible notebooks. [Nexoramind_AI_Company_Policy.docx | Page 1 | Chunk 0]",
+      "retrieval_success": true,
+      "citation_success": true,
+      "entity_coverage": 1.0,
+      "top_similarity": 0.6828,
+      "is_correct": true
+    },
+    {
+      "id": 6,
+      "question": "What is the role of Kubernetes Ingress Controllers?",
+      "expected_source": "Cloud_Computing_Architecture.txt",
+      "ground_truth": "Ingress Controllers route external internet HTTP and HTTPS traffic to internal cluster services based on path and host rules.",
+      "generated_answer": "Based on the provided documentation, - Ingress Controllers: Application-layer HTTP/HTTPS reverse proxies routing external internet traffic to internal cluster services based on path and host rules. [Cloud_Computing_Architecture.txt | Page 1 | Chunk 0] Section 2: Kubernetes Container Orchestration\r\nKubernetes (K8s) serves as the industry standard platform for automating deployment, scaling, and operational management of containerized workloads:\r\n- Pods: The smallest deployable computing units in Kubernetes, encapsulating one or more tightly coupled containers sharing network and storage namespaces. [Cloud_Computing_Architecture.txt | Page 1 | Chunk 0] - Deployments: Declarative controllers that manage replica sets, rolling zero-downtime updates, and automated self-healing pod restarts. [Cloud_Computing_Architecture.txt | Page 1 | Chunk 0]",
+      "retrieval_success": true,
+      "citation_success": true,
+      "entity_coverage": 0.75,
+      "top_similarity": 0.5522,
+      "is_correct": true
+    },
+    {
+      "id": 7,
+      "question": "What is the minimum approval rating required for Nexoramind internship tasks?",
+      "expected_source": "Nexoramind_AI_Company_Policy.docx",
+      "ground_truth": "Candidates must achieve an evaluation approval rating exceeding 80% on each task to advance.",
+      "generated_answer": "Based on the provided documentation, NEXORAMIND TECHNOLOGIES - AI ENGINEER INTERNSHIP POLICY\n\n1. [Nexoramind_AI_Company_Policy.docx | Page 1 | Chunk 0] Program Overview and Evaluation Rubric\n\nThe Nexoramind AI Engineer 6 Months Program consists of 10 hands-on production tasks. [Nexoramind_AI_Company_Policy.docx | Page 1 | Chunk 0] Candidates must achieve an evaluation approval rating exceeding 80% on each task to advance. [Nexoramind_AI_Company_Policy.docx | Page 1 | Chunk 0]",
+      "retrieval_success": true,
+      "citation_success": true,
+      "entity_coverage": 1.0,
+      "top_similarity": 0.661,
+      "is_correct": true
+    },
+    {
+      "id": 8,
+      "question": "What are the core collaboration hours under the Nexoramind remote work policy?",
+      "expected_source": "Nexoramind_AI_Company_Policy.docx",
+      "ground_truth": "Core collaboration hours are 10:00 AM to 5:00 PM IST.",
+      "generated_answer": "Based on the provided documentation, Working Hours and Remote Collaboration\n\nInterns operate under flexible hybrid remote schedules. [Nexoramind_AI_Company_Policy.docx | Page 1 | Chunk 0] Core collaboration hours are 10:00 AM to 5:00 PM IST. [Nexoramind_AI_Company_Policy.docx | Page 1 | Chunk 0] NEXORAMIND TECHNOLOGIES - AI ENGINEER INTERNSHIP POLICY\n\n1. [Nexoramind_AI_Company_Policy.docx | Page 1 | Chunk 0]",
+      "retrieval_success": true,
+      "citation_success": true,
+      "entity_coverage": 1.0,
+      "top_similarity": 0.6249,
+      "is_correct": true
+    },
+    {
+      "id": 9,
+      "question": "How does the backpropagation algorithm update neural network weights?",
+      "expected_source": "Deep_Learning_Fundamentals.pdf",
+      "ground_truth": "Backpropagation applies the calculus chain rule to compute loss gradients with respect to each parameter, and optimizers like AdamW update weights iteratively.",
+      "generated_answer": "Based on the provided documentation, DEEP LEARNING FUNDAMENTALS - PAGE 1\nChapter 1: Artificial Neural Networks and Backpropagation\nArtificial neural networks consist of interconnected layers of artificial neurons. [Deep_Learning_Fundamentals.pdf | Page 1 | Chunk 0] Optimizers like AdamW update weights iteratively. [Deep_Learning_Fundamentals.pdf | Page 1 | Chunk 0] During the forward pass, input features are multiplied by learnable weights, summed\nwith a bias term, and transformed through non-linear activation functions such as ReLU. [Deep_Learning_Fundamentals.pdf | Page 1 | Chunk 0]",
+      "retrieval_success": true,
+      "citation_success": true,
+      "entity_coverage": 1.0,
+      "top_similarity": 0.6745,
+      "is_correct": true
+    },
+    {
+      "id": 10,
+      "question": "What mechanism did the Transformer architecture introduce to replace recurrent networks?",
+      "expected_source": "Deep_Learning_Fundamentals.pdf",
+      "ground_truth": "The Transformer replaced recurrent networks with the Self-Attention mechanism and Scaled Dot-Product Attention.",
+      "generated_answer": "Based on the provided documentation, replaced recurrent networks\nwith the Self-Attention mechanism. [Deep_Learning_Fundamentals.pdf | Page 2 | Chunk 1] DEEP LEARNING FUNDAMENTALS - PAGE 2\nChapter 2: Transformer Architectures and Self-Attention\nThe Transformer model introduced by Vaswani et al. [Deep_Learning_Fundamentals.pdf | Page 2 | Chunk 1] DEEP LEARNING FUNDAMENTALS - PAGE 1\nChapter 1: Artificial Neural Networks and Backpropagation\nArtificial neural networks consist of interconnected layers of artificial neurons. [Deep_Learning_Fundamentals.pdf | Page 1 | Chunk 0]",
+      "retrieval_success": true,
+      "citation_success": true,
+      "entity_coverage": 1.0,
+      "top_similarity": 0.5816,
+      "is_correct": true
+    }
+  ]
+}

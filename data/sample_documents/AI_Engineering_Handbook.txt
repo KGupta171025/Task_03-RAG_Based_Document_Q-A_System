@@ -1,0 +1,20 @@
+NEXORAMIND AI ENGINEERING HANDBOOK (2026 EDITION)
+
+Chapter 1: Foundations of Retrieval-Augmented Generation (RAG)
+Retrieval-Augmented Generation (RAG) is a machine learning design pattern that optimizes the output of Large Language Models (LLMs) by referencing an authoritative knowledge base outside of its training data before generating a response. 
+Standard LLMs suffer from knowledge cutoff dates, lack of domain-specific context, and catastrophic hallucinations. RAG addresses these shortcomings by combining dense vector retrieval with contextual language generation.
+
+The standard RAG pipeline operates in three sequential phases:
+1. Ingestion & Indexing: Documents are parsed from raw formats (PDF, DOCX, TXT), decomposed into uniform text chunks, converted into continuous numerical vector embeddings, and stored in high-performance similarity search indexes such as FAISS, ChromaDB, or Milvus.
+2. Dense Semantic Retrieval: Upon receiving a user prompt, the query is embedded into the same semantic vector space using identical embedding models. A similarity metric—predominantly Cosine Similarity or Inner Product—is computed against the indexed corpus to retrieve the Top-K most relevant chunks.
+3. Grounded Synthesis: The retrieved chunks are formatted into a structured prompt context alongside the original user inquiry. The generative model synthesizes a factual, coherent answer with verified source citations.
+
+Chapter 2: Text Chunking Strategies and Overlap
+Chunking is the process of splitting lengthy documents into smaller, coherent text segments for embedding and indexing. Selecting an appropriate chunk size is critical for retrieval quality:
+- If chunks are too small (e.g., < 100 tokens), they lose semantic context, leading to incomplete or fragmented answers.
+- If chunks are too large (e.g., > 1000 tokens), embeddings become diluted, aggregating multiple disparate concepts and degrading retrieval specificity.
+For standard technical documentation, the industry benchmark standard specifies chunk sizes of approximately 500 tokens with an overlap of 50 tokens. Overlap prevents information loss across chunk boundaries, ensuring that critical clauses and definitions are preserved across adjacent chunks.
+
+Chapter 3: Dense Vector Embeddings and FAISS
+Dense embeddings represent text in continuous high-dimensional vector spaces where semantic proximity correlates with geometric proximity. Models such as sentence-transformers 'all-MiniLM-L6-v2' map textual sequences into 384-dimensional dense vectors.
+FAISS (Facebook AI Similarity Search) is an open-source library optimized for efficient similarity search and clustering of dense vectors. When vector embeddings are L2-normalized to unit length, the inner product computed via FAISS IndexFlatIP is mathematically equivalent to Cosine Similarity. This provides millisecond search latency over millions of document vectors.
